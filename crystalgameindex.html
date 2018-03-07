@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Snowburst+One" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8f1724fac3.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript/crystalgame.js"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="name">
+            <h1>Crystal Collector Game</h1>
+        </div>
+        <nav class="nav">
+            <a href="./index.html">About</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        
+    </header>
+
+    <section class="section">
+        <article class="article">
+            <div class="about">
+                <h2>Instructions</h2>
+            </div>
+                <div class="text">
+                    <p>You will be given a random number at the start of the game. </p>
+                    <p>There are four crystals below. Clicking on a crystal will add a specific amount of points to your total score. </p>
+                    <p>Win the game by matching the stotal score to the random number. Lose the game if the total score goes above the random number.</p>
+                    <p> The value of each crystal is hidden until you click on it.</p>
+                    <p> The values of each crystal change when a new game is started. </p>
+                </div>
+
+                <div class="game">
+                    <div class="random" >
+                        <h2 >Random Number: <span id="random-number"> </span></h2>
+                    </div>
+
+                    <div class="total">
+                    <h2> Your Total Score: <span id="total-score"></span> </h2>
+                    </div>
+
+                    <div>
+                        <!-- <img src="./assets/images/diamond.jpg" class="imgView crystal-image"   />
+                        <img src="./assets/images/green gem.jpg" class="imgView crystal-image"  />
+                        <img src="./assets/images/red gem.jpg" class="imgView crystal-image" />
+                        <img src="./assets/images/yellow gem.jpg" class="imgView crystal-image" /> -->
+                    
+                        <button type="button" class="button crystal-value" id="button1" value="0"></button>
+                        <button type="button" class="button crystal-value" id="button2" value="0"></button>
+                        <button type="button"  class="button crystal-value" id="button3" value="0"></button>
+                        <button type="button"  class="button crystal-value" id="button4" value="0"></button>
+                    </div>
+
+                    <div class="score">
+                        <p>Wins: <span id="wins"></span> </p>
+                        <p>Losses: <span id="losses"></span> </p>
+                    </div>
+                </div>
+            
+        </article>
+        <aside class="aside ">
+            <div class="connect">
+                <h2>Connect with Me</h2>
+            </div>
+            <div class ="contact-info">
+                <a href="https://github.com/kglibrarian"><i class="fa fa-github-alt" aria-hidden="true"style="font-size:36px; color:black";></i><span class="sr-only">GitHub</span></a>
+                <a href="https://stackoverflow.com/users/story/9036480"><i class="fa fa-stack-overflow" aria-hidden="true"style="font-size:36px; color:black";></i><span class="sr-only">Stack Overflow</span></a>
+                <a href="https://twitter.com/kglibrarian"><i class="fa fa-twitter" aria-hidden="true"style="font-size:36px; color:black"></i><span class="sr-only">Twitter</span></a>
+                <a href="https://www.linkedin.com/in/karen-gutzman-33024158/"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:36px; color:black"></i><span class="sr-only">LinkedIn</span></a>
+                <a href="https://www.facebook.com/karen.gutzman"><i class="fa fa-facebook" aria-hidden="true"style="font-size:36px; color:black"></i><span class="sr-only">Facebook</span></a>
+            </div>
+        </aside>
+    </section>
+    <footer class="footer">
+                <p>Copyright 2018 Karen Gutzman</p>
+    </footer>
+    
+
+
+
+</body>
+</html>
