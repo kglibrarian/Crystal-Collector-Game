@@ -7,79 +7,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Snowburst+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Krona+One|Rammetto+One" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"/>
+
     <script src="https://use.fontawesome.com/8f1724fac3.js"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./assets/javascript/crystalgame.js"></script>
 </head>
 <body class="body">
-    <header class="header">
+    <header class="header jumbotron">
         <div class="name">
             <h1>Crystal Collector Game</h1>
         </div>
-        <nav class="nav">
-            <a href="./index.html">About</a>
-            <a href="./portfolio.html">Portfolio</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-        
+           
     </header>
 
     <section class="section">
-        <article class="article">
-            <div class="about">
-                <h2>Instructions</h2>
+        <article class="article container">
+            <div class="row justify-content-between">
+                <div class="about col-sm-12 col-md-6 col-lg-6 mb-5">
+                    <h2>Instructions</h2>
+                
+                    <div class="text">
+                        <p>You will be given a random number at the start of the game. </p>
+                        <p>There are four crystals below. Clicking on a crystal will add a specific amount of points to your total score. </p>
+                        <p>Win the game by matching the total score to the random number. Lose the game if the total score goes above the random number.</p>
+                        <p>The value of each crystal is hidden until you click on it.</p>
+                        <p>The values of each crystal changes when a new game is started. </p>
+                    </div>
+                </div> 
+
+                <div class="score col-sm-12 col-md-4 col-lg-4 mb-5">
+                        <h3>Wins: <span id="wins"></span> </h3>
+                        <h3>Losses: <span id="losses"></span> </h3>
+                    </div>
+
             </div>
-                <div class="text">
-                    <p>You will be given a random number at the start of the game. </p>
-                    <p>There are four crystals below. Clicking on a crystal will add a specific amount of points to your total score. </p>
-                    <p>Win the game by matching the stotal score to the random number. Lose the game if the total score goes above the random number.</p>
-                    <p> The value of each crystal is hidden until you click on it.</p>
-                    <p> The values of each crystal change when a new game is started. </p>
+            <div class="game row mb-5">
+                <div class="random col-sm-12 col-md-6 col-lg-6" >
+                    <h2 >Random Number: <span id="random-number"> </span></h2>
                 </div>
 
-                <div class="game">
-                    <div class="random" >
-                        <h2 >Random Number: <span id="random-number"> </span></h2>
-                    </div>
-
-                    <div class="total">
+                <div class="total col-sm-12 col-md-6 col-lg-6">
                     <h2> Your Total Score: <span id="total-score"></span> </h2>
-                    </div>
-
-                    <div>
+                </div>
+            </div>
+                <div class="gems row p-10 justify-content-around">
                         <!-- <img src="./assets/images/diamond.jpg" class="imgView crystal-image"   />
                         <img src="./assets/images/green gem.jpg" class="imgView crystal-image"  />
                         <img src="./assets/images/red gem.jpg" class="imgView crystal-image" />
                         <img src="./assets/images/yellow gem.jpg" class="imgView crystal-image" /> -->
-                    
-                        <button type="button" class="button crystal-value" id="button1" value="0"></button>
-                        <button type="button" class="button crystal-value" id="button2" value="0"></button>
-                        <button type="button"  class="button crystal-value" id="button3" value="0"></button>
-                        <button type="button"  class="button crystal-value" id="button4" value="0"></button>
+                   
+                    <div "col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" class="btn btna btn-lg" id="button1" value="0"></button>
                     </div>
 
-                    <div class="score">
-                        <p>Wins: <span id="wins"></span> </p>
-                        <p>Losses: <span id="losses"></span> </p>
+                    <div "col-sm-2 col-md-2 col-lg-2">
+                        <button type="button" class="btn btnb btn-lg" id="button2" value="0"></button>
+                    </div >
+
+                    <div "col-sm-2 col-md-2 col-lg-2">
+                        <button type="button"  class="btn btnc btn-lg" id="button3" value="0"></button>
+                    </div>
+
+                    <div "col-sm-2 col-md-2 col-lg-2">
+                        <button type="button"  class="btn btnd btn-lg" id="button4" value="0"></button>
                     </div>
                 </div>
             
+                
+            
+            
         </article>
-        <aside class="aside ">
-            <div class="connect">
-                <h2>Connect with Me</h2>
-            </div>
-            <div class ="contact-info">
-                <a href="https://github.com/kglibrarian"><i class="fa fa-github-alt" aria-hidden="true"style="font-size:36px; color:black";></i><span class="sr-only">GitHub</span></a>
-                <a href="https://stackoverflow.com/users/story/9036480"><i class="fa fa-stack-overflow" aria-hidden="true"style="font-size:36px; color:black";></i><span class="sr-only">Stack Overflow</span></a>
-                <a href="https://twitter.com/kglibrarian"><i class="fa fa-twitter" aria-hidden="true"style="font-size:36px; color:black"></i><span class="sr-only">Twitter</span></a>
-                <a href="https://www.linkedin.com/in/karen-gutzman-33024158/"><i class="fa fa-linkedin" aria-hidden="true" style="font-size:36px; color:black"></i><span class="sr-only">LinkedIn</span></a>
-                <a href="https://www.facebook.com/karen.gutzman"><i class="fa fa-facebook" aria-hidden="true"style="font-size:36px; color:black"></i><span class="sr-only">Facebook</span></a>
-            </div>
-        </aside>
+       
     </section>
     <footer class="footer">
                 <p>Copyright 2018 Karen Gutzman</p>
